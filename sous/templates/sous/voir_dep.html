@@ -1,0 +1,10 @@
+{% extends "sous/base.html" %}
+
+{% block content %}
+<p>Titre de la depense : {{ depense_fixe.titre }}</p>
+<p>Montant de la depense : {{ depense_fixe.montant }}</p>
+
+<a href="/sous/liste_depenses">Retour à la liste des dépenses</a>
+<a href="/sous/edition_dep/{{ depense_fixe.id }}">Modifier</a>
+<a href="/sous/suppression_dep/{{ depense_fixe.id }}">Supprimer</a>
+{% endblock %}

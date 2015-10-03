@@ -1,0 +1,11 @@
+{% extends "sous/base.html" %}
+
+{% block content %}
+
+<h1>Liste des dépenses</h1>
+	{% for depense in liste_depenses %}
+		<p><a href="/sous/liste_depenses/{{ depense.id }}" >{{ depense.titre }}</a> : {{ depense.montant }}</a></p>
+	{% endfor %}
+
+<a href="/sous/nouvelle_depense">Nouvelle dépense</a>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "sous/base.html" %}
+
+{% block content %}
+
+<p>Entrer un montant d'économie : 
+<form action="{% url 'nv_economie' %}" method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Enregistrer" />
+</form>
+</p>
+{% endblock %}

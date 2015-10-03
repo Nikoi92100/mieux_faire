@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <link rel="stylesheet" href="style.css" />
+   <title>{% block title %}Mieux Faire Sous{% endblock %}</title>
+</head>
+<body>
+<header>Mieux Faire</header>
+    <nav>
+       {% block nav %}
+       <ul>
+            <li><a href="/sous/">Accueil</a></li>
+            <li><a href="/sous/liste_depenses/">Liste des dépenses fixes</a></li>
+            <li><a href="/sous/liste_recettes/">Liste des recettes fixes</a></li>
+       </ul>
+       {% endblock %}
+   </nav>
+   <section id="content">
+       {% block content %}{% endblock %}
+   </section>
+<footer>&copy; Mieux Faire</footer>
+</body>
+</html>

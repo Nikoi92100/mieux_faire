@@ -1,0 +1,32 @@
+{% extends "sous/base.html" %}
+
+{% block content %}
+<h2>Enregistrer une dépense</h2>
+<form action="{% url 'sous.views.accueil' %}" method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Enregistrer" />
+</form>
+
+
+<h3>Budget Aujourd'hui = {{ budjour }} €</h3>
+<h3>Budget Demain = {{ budjour_plus_un }} €</h3>
+<h3>Budget restant = {{ bud_restant }} €</h3>
+<h3>Total des dépenses quotidienne = {{ depjour_totale }} €</h3>
+
+
+<p>Total des dépenses fixes = {{ dep_totale }} €</p>
+
+<p>Total des recettes fixes = {{ rec_totale }} €</p>
+
+<p>Entrer un montant d'économie : 
+<form action="{% url 'nv_economie' %}" method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Enregistrer" />
+</form>
+
+<p>Ce mois-ci je souhaite économiser {{ eco_totale }} euros.</p>
+</p>
+{% endblock %}
+

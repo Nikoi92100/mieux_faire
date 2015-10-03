@@ -1,0 +1,7 @@
+{% extends "sous/base.html" %}
+
+{% block content %}
+{% for economie in economie %}
+	<p>Montant de l'économie : {{ economie.montant }}</p>
+{% endfor %}
+{% endblock %}

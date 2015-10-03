@@ -1,0 +1,13 @@
+{% extends "sous/base.html" %}
+
+{% block content %}
+
+<h1>Liste des recettes</h1>
+	{% for recette in liste_recettes %}
+		<p><a href="/sous/liste_recettes/{{ recette.id }}" >{{ recette.titre }}</a> : {{ recette.montant }}</p>
+	{% endfor %}
+	
+<p>Total des recettes : {{ rec_totale }}</p>
+
+<a href="/sous/nouvelle_recette">Nouvelle recette</a>
+{% endblock %}

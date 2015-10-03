@@ -1,0 +1,11 @@
+{% extends "sous/base.html" %}
+
+{% block content %}
+
+<p>Confirmer la suppression</p>
+
+<form method="post" action="">
+   {% csrf_token %}  <!-- Nous prenons bien soin d'ajouter le csrf_token -->
+   <input type="submit" value"Oui" />
+</form>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "sous/base.html" %}
+
+{% block content %}
+
+<p>Titre de la recette : {{ recette_fixe.titre }}</p>
+<p>Montant de la recette : {{ recette_fixe.montant }}</p>
+
+<a href="/sous/liste_recettes">Retour à la liste des dépenses</a>
+<a href="/sous/edition_rec/{{ recette_fixe.id }}">Modifier</a>
+<a href="/sous/suppression_rec/{{ recette_fixe.id }}">Supprimer</a>
+{% endblock %}

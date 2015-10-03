@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <link rel="stylesheet" href="style.css" />
+   <title>{% block title %}Mieux Faire Sous{% endblock %}</title>
+</head>
+<body>
+	<section id="connexion">
+		<h1>Se connecter</h1>
+		
+		{% if error %}
+		<p><strong>Utilisateur inconnu ou mauvais mot de passe.</strong></p>
+		{% endif %}
+		
+		{% if user.is_authenticated %}
+		Vous êtes connecté, {{ user.username }} !
+		{% else %}
+		<form method="post" action=".">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<input type="submit" value="Se connecter" />
+		</form>
+		{% endif %}
+	</section>
+</body>
+</html>
