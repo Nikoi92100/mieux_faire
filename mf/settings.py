@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-from mf.settings_private import *
+from mf.settings_private import * # Import des données cachées (secret key). Le fichier settings_private.py n'est pas inclus dans le repo.
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
